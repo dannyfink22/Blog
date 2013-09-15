@@ -1,3 +1,13 @@
 BlogApp::Application.routes.draw do
-  resources :articles
+
+	root to: 'articles#index'
+
+	resources :articles do
+		resources :comments
+	end
+
+	resources :tags
+
+	resources :authors
+
 end
