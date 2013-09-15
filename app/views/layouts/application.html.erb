@@ -63,6 +63,13 @@
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
+          <h6>
+            <% if logged_in? %>
+              <%= "Logged in as #{current_user.username}" %>
+            <% else %>
+              Logged out
+            <% end %>
+          </h6>
           <div class="span3">
             <div class="well sidebar-nav">
               <h3>To Do List for App</h3>
