@@ -17,7 +17,6 @@ gem 'jbuilder', '1.0.2'
 gem 'paperclip'
 gem 'sorcery'
 gem 'rmagick'
-gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 
