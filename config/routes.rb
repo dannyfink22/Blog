@@ -1,6 +1,6 @@
 BlogApp::Application.routes.draw do
 
-	root to: 'articles#index'
+	root to: 'tags#index'
 
 	resources :articles do
 		resources :comments

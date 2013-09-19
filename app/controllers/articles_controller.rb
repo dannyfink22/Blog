@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_filter :require_login, only: [:create,:new]
+	before_filter :require_login, except: [:show]
 
 
 	def index
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def article_params
-		params.require(:article).permit(:title, :body, :tag_list, :image)
+		params.require(:article).permit(:title, :body, :tag_list, :image_url)
 	end
 
 	def destroy
