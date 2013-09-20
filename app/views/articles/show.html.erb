@@ -6,7 +6,7 @@
 	<% end %>
 </p>	
 
-<p><%= @article.body %></p>
+<p><%= @article.body.html_safe %></p>
 
 <% if logged_in? %>
 	<p><%= link_to "delete", article_path(@article), method: :delete, data: { confirm: "Do you really want to delete this article?"} %> 
