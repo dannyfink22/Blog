@@ -9,8 +9,8 @@
 		<div class="article-wrapper">
 			<p><%= article.title %></p>
 			<p>Published on <%= localize(article.created_at, :format => :long) %></p>
-			<% if article.body.length > 150 %>
-				<%= truncate(article.body, length: 150) %>
+			<% if article.body.length > 275 %>
+				<%= truncate(article.body, length: 275) %>
 				<%= link_to_function ' Read more', "$(this).parent().html('#{escape_javascript article.body}')" %>
 			<% else %>
 				<article><%= article.body %></article></br>
