@@ -15,4 +15,14 @@
  */
 
 /* Your stylesheets goes here... */
+#tunji {
+	position: relative;
+	left: 65px;
+}
+
+#tag-nav {
+	position: absolute;
+	top: 200px;
+	left: 250px;
+}
 

@@ -1,0 +1,14 @@
+		<% @tag.each do |tag| %>
+			<div class="container-fluid">
+      			<div class="row-fluid">
+        			<div class="span3">
+            				<ul class="nav nav-list">
+            						<div id="tag-nav">
+										<%= link_to image_tag(tag.image_url), tag_path(tag), class: "thumbnail" %>
+										<span class='label label-info'><%= link_to tag.name, tag_path(tag), class: "span_tag_link" %></span>
+									</div>
+							</ul>
+					</div>
+				</div>
+			</div>
+		<% end %>

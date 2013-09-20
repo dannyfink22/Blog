@@ -12,6 +12,7 @@
     <!-- Le styles -->
    <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
     <style type="text/css">
       body {
         padding-top: 20px;
@@ -64,7 +65,20 @@
   </head>
 
   <body>
-
+     <!--<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3"> 
+          <div class="well sidebar-nav" id="tag-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> !-->
+    
     <div class="container-narrow">
 
       <div class="masthead">
@@ -82,20 +96,11 @@
 
       <hr>
 
-      <div class="row-fluid marketing">
-        <div class="span6">
-          <h4><%= link_to image_tag("facebook_social_icon.jpeg"), "https://www.facebook.com/danny.finkelstein.3"  %></h4>
-
-          <h4></h4>
-
-        </div>
-
-        <div class="span6">
-          <h4><%= link_to image_tag("twitter_social_icon.png"), "https://twitter.com/dannyfink1" %></h4>
-
-          <h4></h4>
-
-        </div>
+      <div class="row" id="tunji">
+        <div class="span2"><%= link_to image_tag("facebook_social_icon.jpeg"), "https://www.facebook.com/danny.finkelstein.3", :target => "_blank"  %></div>
+        <div class="span2"><%= link_to image_tag("linkedin_social_icon.png"), "http://www.linkedin.com/pub/danny-finkelstein/22/268/355/", :target => "_blank"  %></div>
+        <div class="span2"><%= link_to image_tag("twitter_social_icon.jpg"), "https://twitter.com/dannyfink1", :target => "_blank" %></div>
+        <div class="span2"><%= link_to image_tag("youtube_social_icon.png"), "http://www.youtube.com/channel/UCUrhBVlLxOpuCjOAYFcVluA", :target => "_blank" %></div>
       </div>
 
       <hr>
