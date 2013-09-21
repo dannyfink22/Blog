@@ -223,7 +223,9 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Bubbler One", Helvetica, Arial, sans-serif;
+  font-family: 'Indie Flower', cursive;
+  font-weight: normal;
+  font-style: normal;
   font-size: 17px;
   font-weight:bold;
   line-height: 20px;
