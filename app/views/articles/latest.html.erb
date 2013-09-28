@@ -1,5 +1,10 @@
 <div class="container">
  	<h3><%= Article.last.title %></h3>
  	<p style="font-size:80%;">Published on <%= localize(Article.last.created_at, :format => :long) %></p>
- 	<article><%= Article.last.body %></article>
+ 	<% if Article.last.body.length > 375 %>
+ 		<%= truncate(Article.last.body.html_safe, length: 375) %>
+ 		<%= link_to_function ' Read more', "$(this).parent().html('#{escape_javascript article.body}')" %>
+ 	<% else %>
+ 		<article><%= Article.last.body.html_safe %></article>
+ 	<% end %>
 </div>
