@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_filter :require_login, except: [:show]
+	before_filter :require_login, except: [:show, :latest]
 
 
 	def index
