@@ -1,14 +1,16 @@
-<h1>Current Progress on <%= @tag.name %></h1>
-<% if logged_in? %>
-	<p><%= link_to "edit #{@tag}", edit_tag_path(@tag) %></p>
-	<p><%= link_to "delete", tag_path(@tag), method: :delete, data: { confirm: "Are you sure you want to delete this tag?" } %></p>
-<% end %>
+<div class="container">
+
+	<h1>Current Progress on <%= @tag.name %></h1>
+	<% if logged_in? %>
+		<p><%= link_to "edit #{@tag}", edit_tag_path(@tag) %></p>
+		<p><%= link_to "delete", tag_path(@tag), method: :delete, data: { confirm: "Are you sure you want to delete this tag?" } %></p>
+	<% end %>
 
 
 	<% @tag.articles.each do |article| %>
 		<div class="article-wrapper">
 			<p><%= article.title %></p>
-			<p>Published on <%= localize(article.created_at, :format => :long) %></p>
+			<p style="font-size:80%;">Published on <%= localize(article.created_at, :format => :long) %></p>
 			<% if article.body.length > 275 %>
 				<%= truncate(article.body, length: 275) %>
 				<%= link_to_function ' Read more', "$(this).parent().html('#{escape_javascript article.body}')" %>
@@ -18,6 +20,7 @@
 		</div>
 
     <% end %>
+</div>
 							
 
 

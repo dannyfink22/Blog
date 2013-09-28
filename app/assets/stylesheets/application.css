@@ -26,3 +26,14 @@
 	left: 250px;
 }
 
+.tag-wrapper {
+	margin-top:40px;
+}
+
+.footer {
+	margin-left: 10px;
+}
+
+#tag-with-icon {
+	display:inline;
+}

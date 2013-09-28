@@ -44,6 +44,10 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 	end
 
+	def latest
+		@article = Article.last
+	end
+
 	def update
 		@article = Article.find(params[:id])
 		@article.update(article_params)

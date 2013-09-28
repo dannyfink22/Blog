@@ -1,0 +1,5 @@
+<div class="container">
+ 	<h3><%= Article.last.title %></h3>
+ 	<p style="font-size:80%;">Published on <%= localize(Article.last.created_at, :format => :long) %></p>
+ 	<article><%= Article.last.body %></article>
+</div>

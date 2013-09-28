@@ -1,6 +1,6 @@
 BlogApp::Application.routes.draw do
 
-	root to: 'tags#index'
+	root to: 'articles#latest'
 
 	resources :articles do
 		resources :comments
@@ -14,5 +14,7 @@ BlogApp::Application.routes.draw do
 
 	get 'login'  => 'author_sessions#new'
 	get 'logout' => 'author_sessions#destroy'
+
+	get '/:latest' => 'articles#latest'
 
 end
