@@ -3,7 +3,7 @@
  	<p style="font-size:80%;">Published on <%= localize(Article.last.created_at, :format => :long) %></p>
  	<% if Article.last.body.length > 375 %>
  		<%= truncate(Article.last.body.html_safe, length: 375) %>
- 		<%= link_to_function ' Read more', "$(this).parent().html('#{escape_javascript article.body}')" %>
+ 		<%= link_to_function ' Read more', "$(this).parent().html('#{escape_javascript Article.last.body}')" %>
  	<% else %>
  		<article><%= Article.last.body.html_safe %></article>
  	<% end %>
